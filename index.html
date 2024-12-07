@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$FOXFUN</title>
+    <style>
+        /* General Reset */
+        body, h1, h2, p, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Apply Background to the Whole Body */
+        body {
+            background: url('https://imgpx.com/2DMsWKUZw8Wy.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Gradient Text Effect */
+        h1, h2, p, a, .gradient-text {
+            background: linear-gradient(90deg, lightgray, black);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+
+        /* Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background-color: rgba(27, 27, 47, 0.8);
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+        .header.scrolled {
+            background-color: rgba(39, 41, 61, 0.9);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+        }
+
+        .nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, lightgray, black);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            margin-top: 80px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h2 {
+            font-size: 7rem;
+            position: relative;
+            display: block;
+            margin-bottom: 20px;
+            animation: outlineAnimation 3s infinite;
+        }
+
+        .hero .subtext {
+            font-size: 7rem;
+            font-weight: bold;
+        }
+
+        @keyframes outlineAnimation {
+            0% {
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.4);
+            }
+            50% {
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.7);
+            }
+            100% {
+                text-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about h2 {
+            font-size: 7rem;
+            animation: outlineAnimation 3s infinite;
+        }
+
+        .about p {
+            font-size: 4rem;
+            line-height: 1.5;
+        }
+
+        .telegram-link {
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .telegram-link img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s;
+        }
+
+        .telegram-link img:hover {
+            transform: scale(1.2);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(27, 27, 47, 0.8);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">$FOXFUN</h1>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#community">Community</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <h2>
+                    WELCOME TO <span class="gradient-text">$FOXFUN</span>
+                </h2>
+                <p>The ultimate meme token of the future. Join the movement!</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About <span class="gradient-text">$FOXFUN</span></h2>
+                <p><b>$FOXFUN:</b> The Meme Token Will Make Your Wallet Go Wild! 🦊<br>
+                Hey, listen up, crypto gods and crypto beasts! <span class="gradient-text">$FOXFUN</span> isn't a simple token - it's the ultimate playground of internet culture mixed with blockchain madness!</p>
+            </div>
+        </section>
+
+        <section id="community" class="community">
+            <div class="container">
+                <h2>Join Our Community</h2>
+                <a class="telegram-link" href="https://t.me/FoxFuncommunity" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 <span class="gradient-text">$FOXFUN</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Animation
+        const sections = document.querySelectorAll("section");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+        // Header Scroll Effect
+        const header = document.querySelector(".header");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
